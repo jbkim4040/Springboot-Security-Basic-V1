@@ -27,6 +27,7 @@ public class IndexController {
 	@Autowired
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
 	
+	
 	@GetMapping("/test/login")
 	public @ResponseBody String testLogin(
 			Authentication authentication, 
@@ -60,6 +61,7 @@ public class IndexController {
 	
 	@GetMapping("/user")
 	public @ResponseBody String user(@AuthenticationPrincipal PrincipalDetails PrincipalDetails) {
+		System.out.println("principalDetails : " + PrincipalDetails.getUser());
 		return "user";
 	}
 	
