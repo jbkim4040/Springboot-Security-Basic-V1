@@ -28,10 +28,13 @@ public class User {
 	@CreationTimestamp
 	private Timestamp createDate;
 	
+	private String provider;
+	private String providerId;
+	
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", username=" + username + ", password=" + password + ", email=" + email + ", role="
-				+ role + ", createDate=" + createDate + "]";
+				+ role + ", createDate=" + createDate + ", provider=" + provider + ", providerId=" + providerId + "]";
 	}
 	
 }
